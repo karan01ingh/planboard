@@ -24,7 +24,7 @@ export default function LoginScreen({ onLogin }) {
     setLoading(true)
 
     try {
-      const response = await fetch('/api/boards/join', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/boards/join`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
